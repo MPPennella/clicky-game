@@ -22,12 +22,12 @@ class Game extends Component {
     ]
 
     renderPieces() {
-        return this.zodiacSigns.map( sign => <GamePiece name={sign} />)
+        return this.zodiacSigns.map( sign => <GamePiece key={sign} name={sign} />)
     }
   
     render() {
         return (
-            <div>
+            <div className="row game">
                 {this.renderPieces()}
             </div>
         );
