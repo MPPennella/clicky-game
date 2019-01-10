@@ -1,7 +1,9 @@
 import React, { Component } from "react";
+import GamePiece from "./GamePiece";
 
 class Game extends Component {
   state = {
+    score: 0
   };
 
   
