@@ -10,7 +10,7 @@ class Game extends Component {
   render() {
     return (
       <div>
-        
+        <GamePiece name="Taurus" />
       </div>
     );
   }
