@@ -21,8 +21,12 @@ class Game extends Component {
         "Pisces"
     ]
 
+    gamePieceClickHandler = (event) => {
+        console.log(event.target)
+    }
+
     renderPieces() {
-        return this.zodiacSigns.map( sign => <GamePiece key={sign} name={sign} />)
+        return this.zodiacSigns.map( sign => <GamePiece key={sign} name={sign} clickHandler={this.gamePieceClickHandler} />)
     }
   
     render() {
