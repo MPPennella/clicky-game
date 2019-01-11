@@ -27,11 +27,32 @@ body {
 }
 
 .gameBoard {
-  width:600px;
+  width: 600px;
+}
+
+.gameTextArea {
+  display: table;
+
+  background-color: #2222aadd;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+
+  margin: 20px auto;
+
+  border: #dddddd 5px solid;
+  border-radius: 15px;
+
+  padding: 10px 25px;
 }
 
 .gamePieceImg {
-  width: 150px;
+  margin: 5px;
+  width: 120px;
+
+  border: 3px #b70f2d solid;
+  border-radius: 200px;
+  background: white;
+  padding: 1px;
 }
 
 @keyframes App-logo-spin {

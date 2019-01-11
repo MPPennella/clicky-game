@@ -66,9 +66,9 @@ class Game extends Component {
     renderMessageBox() {
         // If score is equals the number of guessable items, display victory message
         if (this.state.score === this.zodiacSigns.length) {
-            return  <h1>You got them all!</h1>
+            return  <h1 className="gameTextArea">You got them all!</h1>
         } else if (this.state.gameOver === true) {
-            return <h1>You already guessed that! Try again!</h1>
+            return <h1 className="gameTextArea">You already guessed that! Try again!</h1>
         }
         // Return nothing if no conditions met
         return;
@@ -78,7 +78,7 @@ class Game extends Component {
         return (
             <div className="container">
                 <div className="scoreZone">
-                    <h1>Score: {this.state.score}</h1>
+                    <h1 className="gameTextArea">Score: {this.state.score}</h1>
                 </div>
                 
                 <div className="row gameBoard m-auto">
