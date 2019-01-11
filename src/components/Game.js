@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import GamePiece from "./GamePiece";
+import shuffle from "lodash/shuffle";
 
 class Game extends Component {
     state = {
@@ -22,17 +23,27 @@ class Game extends Component {
     ]
 
     gamePieceClickHandler = (event) => {
-        console.log(event.target)
+        console.log(event.target);
+        this.setState({score: this.state.score+1});
     }
 
     renderPieces() {
+        this.zodiacSigns = shuffle(this.zodiacSigns);
+        console.log(this.zodiacSigns);
+
         return this.zodiacSigns.map( sign => <GamePiece key={sign} name={sign} clickHandler={this.gamePieceClickHandler} />)
     }
   
     render() {
         return (
-            <div className="row game">
-                {this.renderPieces()}
+            <div className="container">
+                <div className="scoreZone">
+                    <h1>Score: {this.state.score}</h1>
+                </div>
+                
+                <div className="row gameBoard m-auto">
+                    {this.renderPieces()}
+                </div>
             </div>
         );
     }
