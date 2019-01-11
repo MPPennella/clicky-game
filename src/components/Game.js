@@ -23,6 +23,7 @@ class Game extends Component {
         "Pisces"
     ]
 
+    // Controller for handling clicks on GamePieces
     gamePieceClickHandler = (event, data) => {
         // const {target} = event;
         const {name} = data;
@@ -31,14 +32,18 @@ class Game extends Component {
         if (this.state.guessed.includes(name)) {
             // If duplicate, loss state
             console.log("GUESSED");
+
+            // Reset Score and Guessed list
             this.setState({
                 score: 0,
                 guessed: []
             });
             
         } else {
-            // If not duplicate, increase score
+            // If not duplicate, increase score and add clicked icon to guessed list
             console.log("NOT GUESSED")
+
+            // Increase score and add clicked GamePiece to guessed list
             this.setState({
                 score: this.state.score+1,
                 guessed: this.state.guessed.concat(name)
@@ -46,6 +51,7 @@ class Game extends Component {
         }
     }
 
+    // Creates a randomized array of GamePieces by shuffling the array of possible values
     renderPieces() {
         this.zodiacSigns = shuffle(this.zodiacSigns);
         console.log(this.zodiacSigns);
