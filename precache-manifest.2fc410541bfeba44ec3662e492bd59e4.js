@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "2e334faa881478f3ba710788e45b56a0",
-    "url": "/clicky-game/static/media/Gemini.2e334faa.jpg"
+    "revision": "7ed63b19ac858070e6312c96cba58903",
+    "url": "/clicky-game/static/media/Capricorn.7ed63b19.jpg"
   },
   {
-    "revision": "d245e1d23104fbfd202c",
-    "url": "/clicky-game/static/css/main.158dac3c.chunk.css"
+    "revision": "765630e2ced29d078411",
+    "url": "/clicky-game/static/css/main.f6082d83.chunk.css"
   },
   {
-    "revision": "6670ee6715af9c058022",
-    "url": "/clicky-game/static/js/1.6670ee67.chunk.js"
+    "revision": "008735e427680d5a7ba4",
+    "url": "/clicky-game/static/js/1.008735e4.chunk.js"
   },
   {
     "revision": "6acb6692e4ee25941da6",
@@ -18,6 +18,10 @@ self.__precacheManifest = [
   {
     "revision": "5d5d9eefa31e5e13a6610d9fa7a283bb",
     "url": "/clicky-game/static/media/logo.5d5d9eef.svg"
+  },
+  {
+    "revision": "076e48aa49cdf22474b0e3ff17826aff",
+    "url": "/clicky-game/static/media/zodiac_background.076e48aa.jpg"
   },
   {
     "revision": "7675784983e72556e76b705da0c8587b",
@@ -32,12 +36,12 @@ self.__precacheManifest = [
     "url": "/clicky-game/static/media/Cancer.d01e8e54.jpg"
   },
   {
-    "revision": "7ed63b19ac858070e6312c96cba58903",
-    "url": "/clicky-game/static/media/Capricorn.7ed63b19.jpg"
+    "revision": "765630e2ced29d078411",
+    "url": "/clicky-game/static/js/main.765630e2.chunk.js"
   },
   {
-    "revision": "d245e1d23104fbfd202c",
-    "url": "/clicky-game/static/js/main.d245e1d2.chunk.js"
+    "revision": "2e334faa881478f3ba710788e45b56a0",
+    "url": "/clicky-game/static/media/Gemini.2e334faa.jpg"
   },
   {
     "revision": "b4dd4d15308ee6cc9e49c040985be543",
@@ -68,7 +72,7 @@ self.__precacheManifest = [
     "url": "/clicky-game/static/media/Virgo.44fe118e.jpg"
   },
   {
-    "revision": "28ba48d733d3875285c640b117f58cdf",
+    "revision": "6e17f4d1ec4691df75d1862d5d74f2f4",
     "url": "/clicky-game/index.html"
   }
 ];
