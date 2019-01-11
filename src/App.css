@@ -1,3 +1,7 @@
+body {
+  background-image: url("./assets/zodiac_background.jpg");
+}
+
 .App {
   text-align: center;
 }
