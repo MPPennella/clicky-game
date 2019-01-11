@@ -5,7 +5,8 @@ import shuffle from "lodash/shuffle";
 class Game extends Component {
     state = {
         score: 0,
-        guessed: []
+        guessed: [],
+        gameOver: false
     };
 
     zodiacSigns = [
@@ -33,10 +34,11 @@ class Game extends Component {
             // If duplicate, loss state
             console.log("GUESSED");
 
-            // Reset Score and Guessed list
+            // Reset Score and Guessed list, set gameOver to true
             this.setState({
                 score: 0,
-                guessed: []
+                guessed: [],
+                gameOver: true
             });
             
         } else {
@@ -46,7 +48,8 @@ class Game extends Component {
             // Increase score and add clicked GamePiece to guessed list
             this.setState({
                 score: this.state.score+1,
-                guessed: this.state.guessed.concat(name)
+                guessed: this.state.guessed.concat(name),
+                gameOver: false
             });
         }
     }
@@ -57,6 +60,18 @@ class Game extends Component {
         console.log(this.zodiacSigns);
 
         return this.zodiacSigns.map( sign => <GamePiece key={sign} name={sign} clickHandler={this.gamePieceClickHandler} />)
+    }
+
+    // Controls the appearane of the Win/Loss message box
+    renderMessageBox() {
+        // If score is equals the number of guessable items, display victory message
+        if (this.state.score === this.zodiacSigns.length) {
+            return  <h1>You got them all!</h1>
+        } else if (this.state.gameOver === true) {
+            return <h1>You already guessed that! Try again!</h1>
+        }
+        // Return nothing if no conditions met
+        return;
     }
   
     render() {
@@ -69,7 +84,9 @@ class Game extends Component {
                 <div className="row gameBoard m-auto">
                     {this.renderPieces()}
                 </div>
-            </div>
+
+                {this.renderMessageBox()}
+            </div>            
         );
     }
 }
