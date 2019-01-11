@@ -4,7 +4,8 @@ import shuffle from "lodash/shuffle";
 
 class Game extends Component {
     state = {
-        score: 0
+        score: 0,
+        guessed: []
     };
 
     zodiacSigns = [
@@ -22,9 +23,27 @@ class Game extends Component {
         "Pisces"
     ]
 
-    gamePieceClickHandler = (event) => {
-        console.log(event.target);
-        this.setState({score: this.state.score+1});
+    gamePieceClickHandler = (event, data) => {
+        // const {target} = event;
+        const {name} = data;
+
+        // Check if Piece has already been clicked
+        if (this.state.guessed.includes(name)) {
+            // If duplicate, loss state
+            console.log("GUESSED");
+            this.setState({
+                score: 0,
+                guessed: []
+            });
+            
+        } else {
+            // If not duplicate, increase score
+            console.log("NOT GUESSED")
+            this.setState({
+                score: this.state.score+1,
+                guessed: this.state.guessed.concat(name)
+            });
+        }
     }
 
     renderPieces() {
