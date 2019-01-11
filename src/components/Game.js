@@ -24,6 +24,8 @@ class Game extends Component {
         "Pisces"
     ]
 
+    maxScore = this.zodiacSigns.length;
+
     // Controller for handling clicks on GamePieces
     gamePieceClickHandler = (event, data) => {
         // const {target} = event;
@@ -45,9 +47,11 @@ class Game extends Component {
             // If not duplicate, increase score and add clicked icon to guessed list
             console.log("NOT GUESSED")
 
+            let newScore = !this.state.gameOver ? this.state.score+1 : 1;
+
             // Increase score and add clicked GamePiece to guessed list
             this.setState({
-                score: this.state.score+1,
+                score: newScore, // this.state.score+1,
                 guessed: this.state.guessed.concat(name),
                 gameOver: false
             });
@@ -64,14 +68,22 @@ class Game extends Component {
 
     // Controls the appearane of the Win/Loss message box
     renderMessageBox() {
-        // If score is equals the number of guessable items, display victory message
-        if (this.state.score === this.zodiacSigns.length) {
-            return  <h1 className="gameTextArea">You got them all!</h1>
-        } else if (this.state.gameOver === true) {
-            return <h1 className="gameTextArea">You already guessed that! Try again!</h1>
+        // Check that a gameOver state is true
+        if (this.state.gameOver === true){
+            // Victory message if score equals number of GamePieces, defeat if not
+            let message = (this.state.score === this.maxScore) ? "You got them all!" : "You already guessed that! Try again!";
+            return <h1 className="gameTextArea">{message}</h1>
         }
         // Return nothing if no conditions met
         return;
+    }
+
+    componentDidUpdate () {
+        // Check for victory condition and setState accordingly if true
+        if (this.state.score === this.maxScore && this.state.gameOver === false) this.setState({
+            gameOver: true,
+            guessed: []
+        })
     }
   
     render() {
