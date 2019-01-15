@@ -1,7 +1,7 @@
 {
-  "main.css": "/clicky-game/static/css/main.f6082d83.chunk.css",
-  "main.js": "/clicky-game/static/js/main.765630e2.chunk.js",
-  "main.js.map": "/clicky-game/static/js/main.765630e2.chunk.js.map",
+  "main.css": "/clicky-game/static/css/main.c77d3a28.chunk.css",
+  "main.js": "/clicky-game/static/js/main.6d39cbd5.chunk.js",
+  "main.js.map": "/clicky-game/static/js/main.6d39cbd5.chunk.js.map",
   "static/js/1.008735e4.chunk.js": "/clicky-game/static/js/1.008735e4.chunk.js",
   "static/js/1.008735e4.chunk.js.map": "/clicky-game/static/js/1.008735e4.chunk.js.map",
   "runtime~main.js": "/clicky-game/static/js/runtime~main.6acb6692.js",
@@ -20,8 +20,8 @@
   "static/media/Scorpio.jpg": "/clicky-game/static/media/Scorpio.ed13490e.jpg",
   "static/media/zodiac_background.jpg": "/clicky-game/static/media/zodiac_background.076e48aa.jpg",
   "static/media/Virgo.jpg": "/clicky-game/static/media/Virgo.44fe118e.jpg",
-  "static/css/main.f6082d83.chunk.css.map": "/clicky-game/static/css/main.f6082d83.chunk.css.map",
+  "static/css/main.c77d3a28.chunk.css.map": "/clicky-game/static/css/main.c77d3a28.chunk.css.map",
   "index.html": "/clicky-game/index.html",
-  "precache-manifest.2fc410541bfeba44ec3662e492bd59e4.js": "/clicky-game/precache-manifest.2fc410541bfeba44ec3662e492bd59e4.js",
+  "precache-manifest.c5328270385cb2633285220bca7adf97.js": "/clicky-game/precache-manifest.c5328270385cb2633285220bca7adf97.js",
   "service-worker.js": "/clicky-game/service-worker.js"
 }
